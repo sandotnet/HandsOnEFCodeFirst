@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using HandsOnEFCodeFirst.Entities;
+using Microsoft.EntityFrameworkCore;
 namespace HandsOnEFCodeFirst.Entities
 {
     public class UworldDBContext:DbContext
     {
         //Entity set
         public DbSet<Product> Products { get; set; }
+        public DbSet<Movie> Movies { get; set; }
         //configure connection string
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
