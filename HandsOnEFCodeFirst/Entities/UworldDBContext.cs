@@ -11,7 +11,8 @@ namespace HandsOnEFCodeFirst.Entities
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlServer(@"server=DESKTOP-4O1D65I\SQLEXPRESS;database=UworldDB;trusted_connection=true");
-            optionsBuilder.UseSqlServer(@"Server=tcp:myserver57.database.windows.net,1433;Initial Catalog=mysqldb427;Persist Security Info=False;User ID=azureuser;Password=@zureuser123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            //optionsBuilder.UseSqlServer(@"Server=tcp:myserver57.database.windows.net,1433;Initial Catalog=mysqldb427;Persist Security Info=False;User ID=azureuser;Password=@zureuser123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            optionsBuilder.UseSqlServer(@"Server=tcp:myserver520.database.windows.net,1433;Initial Catalog=MovieDB;Persist Security Info=False;User ID=myadmin;Password=Admin123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
 
     }
