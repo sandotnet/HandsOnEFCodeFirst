@@ -7,10 +7,10 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["HandsOnEFCodeFirst/HandsOnEFCodeFirst.csproj", "HandsOnEFCodeFirst/"]
-RUN dotnet restore "./HandsOnEFCodeFirst/HandsOnEFCodeFirst.csproj"
+COPY ["HandsOnEFCodeFirst.csproj", "."]
+RUN dotnet restore "./HandsOnEFCodeFirst.csproj"
 COPY . .
-WORKDIR "/src/HandsOnEFCodeFirst"
+WORKDIR "/src/."
 RUN dotnet build "./HandsOnEFCodeFirst.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
